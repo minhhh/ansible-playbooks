@@ -1,0 +1,9 @@
+---
+  - name: install python 2.7.5 for ubuntu
+    shell: /bin/bash -c "pyenv install 2.7.5"
+
+  - name: install python 2.7.2 for ubuntu
+    shell: /bin/bash -c "pyenv install 2.7.2"
+
+  - name: set python 2.7.5 as global
+    shell: /bin/bash -c "pyenv global 2.7.5"

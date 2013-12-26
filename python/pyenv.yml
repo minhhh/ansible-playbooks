@@ -1,0 +1,6 @@
+---
+  - hosts: webservers
+
+    tasks:
+      - include: tasks/setup-pyenv.yml
+      - include: tasks/setup-py275.yml

@@ -1,0 +1,33 @@
+---
+  - name: Checkout pyenv
+    git: repo=https://github.com/yyuu/pyenv.git
+         dest="{{ ansible_env.HOME }}/.pyenv"
+
+# Change bashrc
+  - name: Change bashrc 1
+    lineinfile:
+        dest="{{ ansible_env.HOME }}/.bashrc"
+        line='export PYENV_ROOT="$HOME/.pyenv"'
+        regexp="^export PYENV_ROOT"
+        state=present
+        insertafter=EOF
+        create=True
+
+
+  - name: Change bashrc 2
+    lineinfile:
+        dest="{{ ansible_env.HOME }}/.bashrc"
+        line='export PATH="$PYENV_ROOT/bin:$PATH"'
+        regexp='export PATH="\\$PYENV_ROOT/bin:\\$PATH'
+        state=present
+        insertafter=EOF
+        create=True
+
+  - name: Change bashrc 3
+    lineinfile:
+        dest="{{ ansible_env.HOME }}/.bashrc"
+        line='eval "$(pyenv init -)"'
+        regexp='^eval "\\$\(pyenv init -\)"'
+        state=present
+        insertafter=EOF
+        create=True
