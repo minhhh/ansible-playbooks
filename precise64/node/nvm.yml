@@ -1,0 +1,7 @@
+---
+  - hosts: webservers
+    vars:
+        app_ver: 0.6.12
+    tasks:
+      - include: tasks/setup-nvm.yml
+      - include: tasks/setup-node.yml

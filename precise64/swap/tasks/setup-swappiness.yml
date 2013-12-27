@@ -6,9 +6,9 @@
     action: command cat /proc/sys/vm/swappiness
     register: actual_swappiness
 
-  - name: set swappiness value to "$swappiness"
-    action: command "sysctl" "vm.swappiness=$swappiness"
-    when_integer: "${actual_swappiness.stdout} != $swappiness"
+  - name: set swappiness value to "{{swappiness}}"
+    action: command "sysctl" "vm.swappiness={{swappiness}}"
+    when: "{{actual_swappiness.stdout}} !={{swappiness}}"
     notify:
       - swapoff
       - swapon

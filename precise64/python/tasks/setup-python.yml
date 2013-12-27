@@ -1,0 +1,12 @@
+---
+  - name: install python 2.7.5 for ubuntu
+    shell: /bin/bash -lic "yes no | pyenv install 2.7.5"
+    ignore_errors: yes
+
+  - name: install python 2.7.2 for ubuntu
+    shell: /bin/bash -lic "yes no | pyenv install 2.7.2"
+    ignore_errors: yes
+
+  - name: set python 2.7.5 as global
+    shell: /bin/bash -lic "yes no | pyenv global 2.7.5"
+    ignore_errors: yes

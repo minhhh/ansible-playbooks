@@ -27,5 +27,5 @@ If you use this playbook, it is highly recommended to set the `mysql_root_passwo
 ## Example usage
 
 ``` bash
-$ ansible-playbook mysql.yml -uroot --extra-vars "mysql_root_password=TheUserRootPassword"
+$ ansible-playbook mysql.yml -uroot --extra-vars "mysql_root_password=TheUserRootPassword" --sudo
 ```

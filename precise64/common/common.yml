@@ -1,11 +1,12 @@
 # Common ubuntu packages
 ---
 - hosts: webservers
-  sudo: yes
   tasks:
     - name: ensure apt cache is up to date
+      sudo: yes
       action: apt update_cache=yes
     - name: ensure app apt dependencies are installed
+      sudo: yes
       action: apt pkg={{ item }}
       with_items:
         - build-essential
@@ -26,4 +27,11 @@
         - libxslt1-dev
         - libcurl4-openssl-dev
         - libicu-dev
-
+        - libbz2-dev
+        - libsqlite3-dev
+# Remove check in .bashrc
+    # - name: Remove check for interactive shell
+    #   lineinfile:
+    #       dest="{{ ansible_env.HOME }}/.bashrc"
+    #       regexp='^\[ -z "\\$PS1" \] && return'
+    #       state=absent

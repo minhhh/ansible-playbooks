@@ -15,5 +15,5 @@ See http://en.wikipedia.org/wiki/Swappiness for more informations
 ### Usage
 
 ``` bash
-$ ansible-playbook swappiness.yml -uroot --extra-vars "swappiness=60"
+$ ansible-playbook swappiness.yml -uroot --extra-vars "swappiness=60" --sudo
 ```

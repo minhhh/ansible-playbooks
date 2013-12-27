@@ -3,23 +3,14 @@ Python
 
 These playbooks install different python tools.
 
-## apt
+## pyenv
 
-The apt playbook install python-apt to use the `apt` ansible module on remote servers.
+The apt playbook install pyenv on remote servers.
 It is recommended to launch first.
 
 ### Usage
 
 ``` bash
-$ ansible-playbook apt.yml -uroot
+$ ansible-playbook pyenv.yml
 ```
 
-## mysqldb
-
-The mysqldb playbook install python-mysqldb to use `mysql_db` and `mysql_user` ansible modules on remote servers.
-
-### Usage
-
-``` bash
-$ ansible-playbook mysqldb.yml -uroot
-```

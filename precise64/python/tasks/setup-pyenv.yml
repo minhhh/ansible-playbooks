@@ -13,7 +13,6 @@
         insertafter=EOF
         create=True
 
-
   - name: Change bashrc 2
     lineinfile:
         dest="{{ ansible_env.HOME }}/.bashrc"
@@ -31,3 +30,4 @@
         state=present
         insertafter=EOF
         create=True
+

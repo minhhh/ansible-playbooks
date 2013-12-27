@@ -1,0 +1,6 @@
+---
+  - name: install node for ubuntu
+    shell: /bin/bash -lic "nvm install {{ app_ver }}"
+
+  - name: Set node version for ubuntu
+    shell: /bin/bash -lic "nvm alias default {{ app_ver }}"

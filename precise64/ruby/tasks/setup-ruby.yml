@@ -1,0 +1,6 @@
+---
+  - name: install ruby for ubuntu
+    shell: /bin/bash -lic "rvm install {{ ruby_ver }}"
+
+  - name: Set ruby version for ubuntu
+    shell: /bin/bash -lic "rvm use {{ ruby_ver }}"

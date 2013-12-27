@@ -1,0 +1,7 @@
+---
+  - hosts: webservers
+    vars:
+        ruby_ver: 2.0.0
+    tasks:
+      - include: tasks/setup-rvm.yml
+      - include: tasks/setup-ruby.yml

@@ -1,0 +1,11 @@
+---
+  - hosts: webservers
+
+    tasks:
+      - name: restart memcached
+        command: echo "Restart memcached"
+        notify:
+          - restart memcached
+
+    handlers:
+      - include: handlers/handlers.yml

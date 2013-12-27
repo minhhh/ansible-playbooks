@@ -3,4 +3,4 @@
 
     tasks:
       - include: tasks/setup-pyenv.yml
-      - include: tasks/setup-py275.yml
+      - include: tasks/setup-python.yml
