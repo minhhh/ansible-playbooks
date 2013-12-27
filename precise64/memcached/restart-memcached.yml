@@ -1,6 +1,6 @@
 ---
   - hosts: webservers
-
+    sudo: yes
     tasks:
       - name: restart memcached
         command: echo "Restart memcached"

@@ -1,6 +1,6 @@
 ---
   - hosts: all
-
+    sudo: yes
     vars:
       utf8: true
       mysqld:
