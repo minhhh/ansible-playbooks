@@ -1,0 +1,12 @@
+# Common ubuntu packages
+---
+  - hosts: webservers
+
+  - include: common/common.yml
+  - include: memcached/memcached.yml
+  - include: mysql/mysql.yml
+  - include: node/nvm.yml
+  - include: python/pyenv.yml
+  - include: ruby/rvm.yml
+  - include: swap/swappiness.yml
+

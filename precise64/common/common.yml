@@ -29,6 +29,12 @@
         - libicu-dev
         - libbz2-dev
         - libsqlite3-dev
+        - virtualbox-guest-additions
+        - screen
+        - language-pack-en-base
+    - name: apt upgrade
+      sudo: yes
+      action: apt upgrade=yes
 # Remove check in .bashrc
     # - name: Remove check for interactive shell
     #   lineinfile:

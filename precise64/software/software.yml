@@ -1,0 +1,11 @@
+# Common ubuntu packages
+---
+- hosts: webservers
+  tasks:
+    - name: Essential software
+      sudo: yes
+      action: apt pkg={{ item }}
+      with_items:
+        - vim
+        - firefox
+        - chromium-browser

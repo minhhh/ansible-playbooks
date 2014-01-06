@@ -1,7 +1,13 @@
 ---
   - hosts: webservers
     vars:
-        app_ver: 0.6.12
+        app_ver: 0.8.9
     tasks:
       - include: tasks/setup-nvm.yml
       - include: tasks/setup-node.yml
+# Remove line in .profile
+      - name: Remove source in .profilej
+        lineinfile:
+          dest="{{ ansible_env.HOME }}/.profile"
+          regexp='^\[ -s \\$HOME\/\.nvm/nvm\.sh \]'
+          state=absent

@@ -1,0 +1,13 @@
+# Common ubuntu packages
+---
+- hosts: webservers
+  tasks:
+    - name: Install gnome
+      sudo: yes
+      action: apt pkg={{ item }} install_recommends=no
+      with_items:
+        - ubuntu-desktop
+        - gnome-session-fallback
+        - gnome-panel
+        - gnome-tweak-tool
+
