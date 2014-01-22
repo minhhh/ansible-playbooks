@@ -5,7 +5,7 @@
     - name: ensure apt cache is up to date
       sudo: yes
       action: apt update_cache=yes
-    - name: ensure app apt dependencies are installed
+    - name: install dependencies 1
       sudo: yes
       action: apt pkg={{ item }}
       with_items:
@@ -21,6 +21,13 @@
         - git-core
         - git
         - openssh-server
+    - name: reensure apt cache is up to date
+      sudo: yes
+      action: apt update_cache=yes
+    - name: install dependencies 1
+      sudo: yes
+      action: apt pkg={{ item }}
+      with_items:
         - postfix
         - checkinstall
         - libxml2-dev

@@ -6,7 +6,7 @@
       - include: tasks/setup-nvm.yml
       - include: tasks/setup-node.yml
 # Remove line in .profile
-      - name: Remove source in .profilej
+      - name: Remove source in .profile
         lineinfile:
           dest="{{ ansible_env.HOME }}/.profile"
           regexp='^\[ -s \\$HOME\/\.nvm/nvm\.sh \]'
