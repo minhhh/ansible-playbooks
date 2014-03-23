@@ -1,0 +1,9 @@
+---
+  - hosts: webservers
+    vars:
+        app_ver: 0.8.9
+    tasks:
+      - include: tasks/setup-apache.yml
+
+    handlers:
+      - include: handlers/handlers.yml
