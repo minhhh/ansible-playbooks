@@ -1,4 +1,8 @@
 ---
-  - name: Install nvm
-    shell: executable=/bin/bash curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+  - name: Clone nvm repository
+    git: >
+      repo=https://github.com/creationix/nvm.git
+      dest=~/.nvm
+      accept_hostkey=true
+    sudo: no
 
