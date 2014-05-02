@@ -1,7 +1,13 @@
-Ansible
-=======
+# ANSIBLE
 
 My ansible playbooks.
+
+## SETUP MACHINE
+On the target Linux machine, do the following steps
+1. Install `build-essential` and `curl`
+1. Install Pyenv
+1. Install Ansible
+1. Copy ssh-key to machine
 
 ## Usage
 
