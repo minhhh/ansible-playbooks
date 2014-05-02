@@ -4,9 +4,19 @@ My ansible playbooks.
 
 ## SETUP MACHINE
 On the target Linux machine, do the following steps
-1. Install `build-essential` and `curl`
+1. Install `build-essential`, `zlib1g-dev`, `openssl` and `curl`
+
+    sudo apt-get install build-essential zlib1g-dev openssl curl libz-dev libreadline-dev libncursesw5-dev libssl-dev libgdbm-dev libsqlite3-dev libbz2-dev python-apt
+
 1. Install Pyenv
 1. Install Ansible
+
+    sudo su
+    export PATH=[pyenv_shim]:$PATH
+    pip install ansible
+
+Then go to `/home/$USER/.pyenv/versions/2.7.5/bin/`, and chown the ansible file to current user
+
 1. Copy ssh-key to machine
 
 ## Usage
