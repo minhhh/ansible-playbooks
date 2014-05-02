@@ -39,6 +39,7 @@
         # - virtualbox-guest-additions # uncomment this if virtual box guests
         - screen
         - language-pack-en-base
+        - aptitude
     - name: apt upgrade
       sudo: yes
       action: apt upgrade=yes
