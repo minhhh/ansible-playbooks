@@ -17,6 +17,10 @@ Since `.bashrc` only works for interactive shell, make sure that you insert your
 ## Docker
 [Vagrant, Docker and Ansible](http://devo.ps/blog/2013/09/25/vagrant-docker-and-ansible-wtf.html)
 
+[SETUP DOCKER ON OSX](http://blog.javabien.net/2014/03/03/setup-docker-on-osx-the-no-brainer-way/)
+
+
+
 ## My ansible playbooks.
 
 ### SETUP MACHINE
