@@ -14,11 +14,14 @@ Since `.bashrc` only works for interactive shell, make sure that you insert your
 ### Run ansible for single machine
     ansible-playbook --limit imac-2.local user.yml
 
-## Docker
+## DOCKER
 [Vagrant, Docker and Ansible](http://devo.ps/blog/2013/09/25/vagrant-docker-and-ansible-wtf.html)
 
 [SETUP DOCKER ON OSX](http://blog.javabien.net/2014/03/03/setup-docker-on-osx-the-no-brainer-way/)
 
+### Remove all docker container
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
 
 
 ## My ansible playbooks.
