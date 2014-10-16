@@ -1,27 +1,18 @@
 # ANSIBLE
-
-## Ansible
-[http://julien.ponge.org/blog/scalable-and-understandable-provisioning-with-ansible-and-vagrant/](http://julien.ponge.org/blog/scalable-and-understandable-provisioning-with-ansible-and-vagrant/)
+## Installation
+* [http://julien.ponge.org/blog/scalable-and-understandable-provisioning-with-ansible-and-vagrant/](http://julien.ponge.org/blog/scalable-and-understandable-provisioning-with-ansible-and-vagrant/)
 
 Install specific software such as
-  * mysql
-  * pyenv
-  * nvm
-  * rvm
+* mysql
+* pyenv
+* nvm
+* rvm
 
 Since `.bashrc` only works for interactive shell, make sure that you insert your lines at the beginning of this file. But maybe it's better to not rely on this behavior
 
-### Run ansible for single machine
+Run ansible for single machine
+
     ansible-playbook --limit imac-2.local user.yml
-
-## DOCKER
-[Vagrant, Docker and Ansible](http://devo.ps/blog/2013/09/25/vagrant-docker-and-ansible-wtf.html)
-
-[SETUP DOCKER ON OSX](http://blog.javabien.net/2014/03/03/setup-docker-on-osx-the-no-brainer-way/)
-
-### Remove all docker container
-    docker stop $(docker ps -a -q)
-    docker rm $(docker ps -a -q)
 
 
 ## My ansible playbooks.
@@ -115,3 +106,13 @@ Then go to `/home/$USER/.pyenv/versions/2.7.5/bin/`, and chown the ansible file 
     vars:
       swappiness: 60
 ```
+
+
+
+
+# DOCKER
+* [Vagrant, Docker and Ansible](http://devo.ps/blog/2013/09/25/vagrant-docker-and-ansible-wtf.html)
+* [SETUP DOCKER ON OSX](http://blog.javabien.net/2014/03/03/setup-docker-on-osx-the-no-brainer-way/)
+* [Supercharge your development environment using Docker](http://www.youtube.com/watch?v=-l9xH1X_rvg)
+* [Docker cheat sheet](https://github.com/minhhh/docker-cheat-sheet)
+
