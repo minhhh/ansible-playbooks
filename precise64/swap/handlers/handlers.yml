@@ -1,6 +1,8 @@
 ---
   - name: swapoff
+    sudo: yes
     action: command swapoff -av
 
   - name: swapon
+    sudo: yes
     action: command swapon -av
