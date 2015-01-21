@@ -2,7 +2,9 @@
   - name: swapoff
     sudo: yes
     action: command swapoff -av
+    ignore_errors: yes
 
   - name: swapon
     sudo: yes
     action: command swapon -av
+    ignore_errors: yes
