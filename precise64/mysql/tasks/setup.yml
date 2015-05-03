@@ -2,6 +2,9 @@
   - name: install mysql-server
     action: apt name=mysql-server
 
+  - name: install libmysqlclient-dev
+    action: apt name=libmysqlclient-dev
+
   - name: write conf.d/mysqld.cnf
     action: template src=templates/mysqld.cnf.j2 dest=/etc/mysql/conf.d/mysqld.cnf
     notify:
