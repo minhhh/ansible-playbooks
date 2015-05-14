@@ -1,24 +1,8 @@
 # ANSIBLE
 ## Installation
-* [http://julien.ponge.org/blog/scalable-and-understandable-provisioning-with-ansible-and-vagrant/](http://julien.ponge.org/blog/scalable-and-understandable-provisioning-with-ansible-and-vagrant/)
-
-Install specific software such as
-* mysql
-* pyenv
-* nvm
-* rvm
+* [Scalable and Understandable Provisioning with Ansible and Vagrant](http://julien.ponge.org/blog/scalable-and-understandable-provisioning-with-ansible-and-vagrant/)
 
 Since `.bashrc` only works for interactive shell, make sure that you insert your lines at the beginning of this file. But maybe it's better to not rely on this behavior
-
-Run ansible for single machine
-
-    ansible-playbook --limit imac-2.local user.yml
-
-
-## My ansible playbooks.
-
-### SETUP MACHINE
-On the target Linux machine, do the following steps
 
 1. Install `build-essential`, `zlib1g-dev`, `openssl` and `curl`
 
@@ -31,11 +15,16 @@ On the target Linux machine, do the following steps
     export PATH=[pyenv_shim]:$PATH
     pip install ansible
 
-Then go to `/home/$USER/.pyenv/versions/2.7.5/bin/`, and chown the ansible file to current user
+Then go to `/home/$USER/.pyenv/versions/x.x.x/bin/`, and chown the ansible file to current user
 
 4. Copy ssh-key to machine
 
-### Usage
+5. Run ansible for single machine
+
+    ansible-playbook --limit imac-2.local user.yml
+
+
+## Usage
 
 ``` yaml
 ---

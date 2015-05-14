@@ -42,7 +42,7 @@
         - aptitude
     - name: apt upgrade
       sudo: yes
-      action: apt upgrade=yes
+      action: apt upgrade=dist
 # Remove check in .bashrc
     # - name: Remove check for interactive shell
     #   lineinfile:
